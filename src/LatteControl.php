@@ -1,6 +1,6 @@
 <?php
 
-namespace Sw2\Controls;
+namespace Sw2;
 
 use Nette;
 use Nette\Utils\Strings;
