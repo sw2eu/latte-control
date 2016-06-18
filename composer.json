@@ -1,0 +1,17 @@
+{
+	"name": "sw2eu/latte-control",
+	"license": "BSD",
+	"authors": [
+		{
+			"name": "Lukas Povoda",
+			"email": "lupo112@gmail.com"
+		}
+	],
+	"require": {
+		"nette/application": "^2.3",
+		"nette/utils": "~2.3"
+	},
+	"autoload": {
+		"classmap": ["src/"]
+	}
+}
