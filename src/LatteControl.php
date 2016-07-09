@@ -40,6 +40,7 @@ abstract class LatteControl extends Nette\Application\UI\Control
 			}
 
 			$this->tryCall("prepare$subMethod", (array)@$args[0]);
+			$this->tryCall('beforeRender', []);
 			$this->template->render();
 		}
 		else {
@@ -55,7 +56,7 @@ abstract class LatteControl extends Nette\Application\UI\Control
 	 */
 	protected function formatTemplateFiles($subMethod)
 	{
-		$controlName = $this->reflection->getShortName();
+		$controlName = $this->getReflection()->getShortName();
 		$control = Strings::replace($controlName, '~Control$~');
 		$dir = dirname($this->getReflection()->getFileName());
 		$dir = is_dir("$dir/templates") ? $dir : dirname($dir);
